@@ -1,1 +1,1 @@
-# wp-plugin-export-logs
+# zoho-export-logs
