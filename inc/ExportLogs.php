@@ -22,8 +22,7 @@ class ExportLogs
      */
     public function add_ajax_actions()
     {
-        add_action( 'wp_ajax_goit_export_logs', [ $this, 'export' ] );
-        add_action( 'wp_ajax_nopriv_ajax_goit_export_logs', [ $this, 'export' ] );
+        add_action( 'wp_ajax_goit_export_logs', [ $this, 'export' ], 99 );
 
     }
 
@@ -265,3 +264,5 @@ class ExportLogs
     }
 
 }
+
+new ExportLogs();

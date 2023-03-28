@@ -16,7 +16,7 @@ License URI:	http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+    exit;
 }
 
 /**
@@ -28,7 +28,4 @@ define( 'ZOHO_EXPORT_LOGS_PLUGIN_URL', plugin_dir_url( __FILE__ ) ); // define t
 if( is_admin() )
 {
     include( ZOHO_EXPORT_LOGS_PLUGIN_PATH . 'inc/ExportLogs.php' );
-
-    $popupVoucher = new ExportLogs();
 }
-
