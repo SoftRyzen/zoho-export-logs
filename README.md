@@ -1,1 +1,2 @@
-# Plugin: zoho-export-logs
+# Wordpress Plugin
+## zoho-export-logs
