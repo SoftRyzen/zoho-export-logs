@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: 	Export Logs
+Plugin Name: 	Zoho Export Logs
 Plugin URI:		https://goiteens.com/
-Description: 	Export Logs
+Description: 	Плагин для экспортирования логово Zoho
 Version: 		1.0.0
 Author: 		Goiteens
 Author URI: 	https://goiteens.com/
@@ -22,12 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Global variables
  */
-define( 'EXPORT_LOGS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );	// define the absolute plugin path for includes
-define( 'EXPORT_LOGS_PLUGIN_URL', plugin_dir_url( __FILE__ ) ); // define the plugin url for use in enqueue
+define( 'ZOHO_EXPORT_LOGS_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );	// define the absolute plugin path for includes
+define( 'ZOHO_EXPORT_LOGS_PLUGIN_URL', plugin_dir_url( __FILE__ ) ); // define the plugin url for use in enqueue
 
 if( is_admin() )
 {
-    include( EXPORT_LOGS_PLUGIN_PATH . 'inc/ExportLogs.php' );
+    include( ZOHO_EXPORT_LOGS_PLUGIN_PATH . 'inc/ExportLogs.php' );
 
     $popupVoucher = new ExportLogs();
 }

@@ -36,10 +36,10 @@ class ExportLogs
 
         add_submenu_page(
             'tools.php',
-            __( 'Export Logs', 'exportlogs' ),
-            __( 'Export Logs', 'exportlogs' ),
+            __( 'Zoho Export Logs', 'exportlogs' ),
+            __( 'Zoho Export Logs', 'exportlogs' ),
             'manage_options',
-            'export-logs',
+            'zoho-export-logs',
             [ $this, 'render_page' ]
         );
 
@@ -54,18 +54,18 @@ class ExportLogs
 
         $current_screen = get_current_screen();
 
-        if ( 'tools_page_export-logs' !== $current_screen->id ) return false;
+        if ( 'tools_page_zoho-export-logs' !== $current_screen->id ) return false;
 
         wp_enqueue_style(
             'exportlogs',
-            EXPORT_LOGS_PLUGIN_URL . 'assets/css/main.css',
+            ZOHO_EXPORT_LOGS_PLUGIN_URL . 'assets/css/main.css',
             [],
             self::PACKAGE_VERSION
         );
 
         wp_enqueue_script(
             'exportlogs',
-            EXPORT_LOGS_PLUGIN_URL . 'assets/js/script.js',
+            ZOHO_EXPORT_LOGS_PLUGIN_URL . 'assets/js/script.js',
             array(),
             false,
             true
@@ -150,7 +150,7 @@ class ExportLogs
 
             $log = sprintf('File - %s, Line - %s | %s', __FILE__, __LINE__, $e->getMessage());
 
-            file_put_contents(EXPORT_LOGS_PLUGIN_PATH . 'logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
+            file_put_contents(ZOHO_EXPORT_LOGS_PLUGIN_PATH . 'logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
 
         }
 
@@ -212,7 +212,7 @@ class ExportLogs
 
             $log = sprintf('File - %s, Line - %s | %s', __FILE__, __LINE__, $e->getMessage());
 
-            file_put_contents(EXPORT_LOGS_PLUGIN_PATH . 'logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
+            file_put_contents(ZOHO_EXPORT_LOGS_PLUGIN_PATH . 'logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
 
         }
 
@@ -258,7 +258,7 @@ class ExportLogs
 
             $log = sprintf('File - %s, Line - %s | %s', __FILE__, __LINE__, $e->getMessage());
 
-            file_put_contents(EXPORT_LOGS_PLUGIN_PATH . 'logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
+            file_put_contents(ZOHO_EXPORT_LOGS_PLUGIN_PATH . 'logs/log_'.date("j.n.Y").'.log', $log, FILE_APPEND);
 
         }
 
