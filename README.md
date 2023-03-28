@@ -1,1 +1,1 @@
-# zoho-export-logs
+# Plugin: zoho-export-logs
